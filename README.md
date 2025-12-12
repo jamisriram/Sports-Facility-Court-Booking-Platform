@@ -95,10 +95,6 @@ See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed deployment instructions to Ver
 └── DEPLOYMENT.md     # Deployment guide
 ```
 
-## License
-
-MIT
-
 ---
 
 Built with ❤️ for Acorn Globus Assignment
