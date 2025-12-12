@@ -10,21 +10,9 @@ const app = express();
 connectDB();
 
 // Middleware
-const allowedOrigins = [
-    'http://localhost:3000',
-    process.env.FRONTEND_URL || 'http://localhost:3000'
-].filter(Boolean);
-
+// Temporarily allow all origins for deployment
 app.use(cors({
-    origin: function (origin, callback) {
-        // Allow requests with no origin (mobile apps, Postman, etc.)
-        if (!origin) return callback(null, true);
-        if (allowedOrigins.indexOf(origin) !== -1) {
-            callback(null, true);
-        } else {
-            callback(new Error('Not allowed by CORS'));
-        }
-    },
+    origin: true,
     credentials: true
 }));
 app.use(express.json());
